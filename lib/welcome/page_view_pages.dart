@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:fluttershopapp/homepage/homepage.dart';
 
 class PageViewPages extends StatefulWidget {
   PageViewPages(
@@ -64,7 +65,10 @@ class _PageViewPagesState extends State<PageViewPages> {
               widget.pageController.animateToPage(widget.index,
                   duration: const Duration(microseconds: 500),
                   curve: Curves.decelerate);
-            } else {}
+            } else {
+              Navigator.of(context)
+                  .pushNamedAndRemoveUntil("signin", (route) => false);
+            }
           },
           child: Container(
             margin: EdgeInsets.all(25.w),
