@@ -50,14 +50,15 @@ Widget buildThirdPartyLogin(BuildContext context) {
 
 Widget reusebleText(String text) {
   return Container(
-      margin: EdgeInsets.only(bottom: 5.h),
-      child: Text(
-        text,
-        style: TextStyle(
-            color: Colors.grey.withOpacity(0.5),
-            fontSize: 14.sp,
-            fontWeight: FontWeight.normal),
-      ));
+    margin: EdgeInsets.only(bottom: 5.h),
+    child: Text(
+      text,
+      style: TextStyle(
+          color: Colors.grey.withOpacity(0.5),
+          fontSize: 14.sp,
+          fontWeight: FontWeight.normal),
+    ),
+  );
 }
 
 Widget buildTextField(String text, String textType, String iconName) {
@@ -104,6 +105,22 @@ Widget buildTextField(String text, String textType, String iconName) {
           ),
         )
       ],
+    ),
+  );
+}
+
+Widget forgotPaswordText() {
+  return Container(
+    width: 260.w,
+    height: 44.h,
+    margin: EdgeInsets.only(bottom: 5.h),
+    child: GestureDetector(
+      onTap: () {},
+      child: Text(
+        "Forgot Password ?",
+        style: TextStyle(
+            color: Colors.black, fontSize: 14.sp, fontWeight: FontWeight.bold),
+      ),
     ),
   );
 }
